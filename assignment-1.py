@@ -1,3 +1,4 @@
+from datetime import datetime
 name = "Angel"
 age = 24
 height = 6.4
@@ -11,7 +12,7 @@ print()
 
 name_1 = input("What is your name? ")
 birthyear = input("What year were you born? ")
-age = int(2026) - int(birthyear)
+age = int(datetime.now().year ) - int(birthyear)
 print(f"Hi, {name_1.title()}! You are approximately {age} years old.")
 print()
 
@@ -21,13 +22,17 @@ total = price * drinks
 print(f"Total:${total:.2f}")
 print()
 
+item = "soda"
+soda_price = 2.79
+how_many = 3
+total = float(soda_price * how_many)
 print("=============================")
 print("          Receipt            ")
-print("Item:              Soda      ")
-print("Price:            $",price, "")
-print("Quantity:          ",drinks,"")
+print("Item:            ", item.title()," ")
+print("Price:            $",soda_price, "")
+print("Quantity:          ",how_many,"")
 print("-----------------------------")
-print("Total:""          $",total," ")
+print(f"Total:             ${total:.2f}", "" )
 print("=============================")
 print()
 
@@ -36,9 +41,9 @@ hobby = input("What do you do for fun? ")
 fact = input("What is a fun fact about yourself? ")
 print()
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print("Profile Card:", name_1.title(),)
+print(f"Profile Card: {name_1.title()}")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print("Hometown:",hometown.title())
-print("Hobby:",hobby.title())
-print("Fun fact:", fact.capitalize())
-print("Age:",age)
+print(f"Hometown:{hometown.title()}")
+print(f"Hobby:{hobby.title()}")
+print(f"Fun fact: {fact.capitalize()}")
+print(f"Age:{age}")
